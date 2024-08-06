@@ -1,0 +1,20 @@
+<body>
+{% for message in messages %}
+<div class="alart alert-{{message.tags}} alart-dismissible fade show" role="alart">
+ <strong>message</strong>{{message}}
+  <button type="button" class="close" data-dismiss="alart" aria-label="close">
+ <span aria-hidden "true">&times;</span>
+  </button>
+  {% endfor %}
+ 
+  <h3> Weclome to ELDA SCHHOL</H3>
+  {%if user.is_authenticated%}
+  <h3 hello{{fname}}</h3>
+  <h4> you re successfully logged in</h4>
+  <button type='submit'> <a href="signout">signout</a></button> 
+
+  {% else %}
+<button type='submit'> <a href="signup">signup</a></button> 
+<button type='submit'> <a href="signin">signin</a></button> 
+ {% endif %}
+  </body>

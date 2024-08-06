@@ -1,0 +1,29 @@
+
+<html>
+    <title> My data </title> 
+
+<body> 
+
+          {% for message in messages %}
+           <div class="alart alert-{{message.tags}} alart-dismissible fade show" role="alart">
+            <strong>message</strong>{{message}}
+             <button type="button" class="close" data-dismiss="alart" aria-label="close">
+            <span aria-hidden "true">&times;</span>
+             </button>
+          {% endfor %}
+      
+      <h3> signin</h3> 
+    
+      <form action="signin" method="post">     
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type "text" id="username" name="username" placeholder="  Enter your username" Required>
+        <br>
+        
+        <label for="">Password</label>
+        <input type "Password" id="pass1" name="pass1" placeholder="Enter your password" Required>
+         <br>
+        <button type="submit">signin</button>
+    </form>
+</body>
+</html>
